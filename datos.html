@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LCD</title>
+</head>
+<body>
+  <!-- Instrucciones -->
+  <section>
+    <div class="row">
+      <div class="col s12">
+        <ul class="collapsible">
+      <li class="active">
+        <div class="collapsible-header"><i class="material-icons">comment</i>LCD</div>
+        <div class="collapsible-body"><span>a segunda parte de este término, 16x2, se refiere a que la pantalla cuenta con dos filas, cada una con la capacidad para mostrar hasta dieciséis caracteres, símbolos o figuras, según su programación.</span>
+          <!-- <img alt = 'ArduinoBlocks'src = 'https://drive.google.com/uc?export=view&id=14_pxi7GAg_JTne_g4WKqlamj7Ve88Qcc'
+             /> -->
+          </div>
+      </li>
+      <!-- Inicio de instruccion  -->
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Compiled and minified JavaScript -->
+  <!--JavaScript at end of body for optimized loading-->
+  <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js" charset="utf-8"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.collapsible');
+          var instances = M.Collapsible.init(elems);
+        });
+        var instance = M.Carousel.init({
+      fullWidth: true,
+      indicators: true
+        });
+        var instance = M.Carousel.init({
+          fullWidth: true
+        });
+
+          document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems);
+          });
+          document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems);
+      });
+
+      document.getElementById('codigo').addEventListener('change', selecSeccion);
+        function selecSeccion(){
+
+          if (document.getElementById('codigo').value === "ATC"){
+            alert('Estás listo para construir');
+            document.getElementById('guia').innerHTML =
+            `<div class="col s2"></div>
+            <div class="col s8">
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQLUDY7rLokPCU9uNJ5mTJVP5GqoREQ0V9QuIoIspTGCTTsQfRb5SDd7hUqa-M6lVl4Uv45bYySNR7B/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1024" height="797" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <div class="col s2"></div>
+          </div>
+`
+          }
+           if (document.getElementById('codigo').value != "ATC"){
+            alert('Aún no cumples el reto' );
+          }
+            document.getElementById('codigo').value = "";
+
+        }
+
+      </script>
+</body>
+
+</html>
